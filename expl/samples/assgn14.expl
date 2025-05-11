@@ -1,0 +1,26 @@
+int main()
+{
+  decl
+   int num,val,idx,flag;
+  enddecl
+  
+  begin
+   num=1;
+   while(num<=100) do
+     idx = 2;
+     flag = 1;
+        while(idx<=(num/2)) do
+            if((num%idx)==0) then
+                flag = 0;
+            endif;
+            idx = idx+1;
+        endwhile;
+     if(flag==1) then
+        val=exposcall("Write",-2,num);
+     endif;
+     num=num+1;	
+   endwhile;
+		
+   return 0;
+  end
+}

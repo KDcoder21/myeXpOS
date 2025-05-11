@@ -1,0 +1,36 @@
+decl
+    int idx,find_prime(int n);
+enddecl
+
+int find_prime(int n)
+{
+    begin
+        idx = 2;
+        while(idx<=(n/2)) do
+            if((n%idx)==0) then
+                return 0;
+            endif;
+            idx = idx+1;
+        endwhile;
+        return 1;
+    end
+}
+
+int main()
+{
+  decl
+   int num,val;
+  enddecl
+  
+  begin
+   num=1;
+   while(num<=100) do
+     if((find_prime(num))==1) then
+        val=exposcall("Write",-2,num);
+     endif;
+     num=num+1;	
+   endwhile;
+		
+   return 0;
+  end
+}
